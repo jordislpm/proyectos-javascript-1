@@ -6,7 +6,7 @@ const buttonAdd = document.querySelector("#bAdd");
 
 const json = load();
 const arr = JSON.parse(json);
-events = [...arr];
+
 renderEvents();
 
 document.querySelector("form").addEventListener("submit", (e) => {
@@ -14,6 +14,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
 });
 
 buttonAdd.addEventListener("click", (e) => {
+  e.preventDefault();
   addEvent();
 });
 
